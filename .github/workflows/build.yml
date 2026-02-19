@@ -21,17 +21,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        gradle-version: '5.6.4'
-    
-    - name: Check environment
+    - name: Install Gradle manually
       run: |
-        java -version
+        wget -q https://services.gradle.org/distributions/gradle-5.6.4-bin.zip -O gradle.zip
+        unzip -q gradle.zip
+        export PATH=$PWD/gradle-5.6.4/bin:$PATH
         gradle --version
-        ls -la
-        ls -la app/
+        echo "PATH=$PATH" >> $GITHUB_ENV
     
     - name: Build Debug APK
       run: gradle assembleDebug --no-daemon --stacktrace
