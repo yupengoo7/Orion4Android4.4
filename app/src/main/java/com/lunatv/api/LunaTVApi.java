@@ -136,10 +136,18 @@ public class LunaTVApi {
             @Override
             public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    // 保存 Cookie
-                    String cookies = response.headers().get("Set-Cookie");
-                    if (cookies != null) {
-                        Preferences.setAuthCookie(cookies);
+                    // 保存所有 Cookie
+                    List<String> cookies = response.headers().values("Set-Cookie");
+                    if (cookies != null && !cookies.isEmpty()) {
+                        StringBuilder cookieBuilder = new StringBuilder();
+                        for (String cookie : cookies) {
+                            if (cookieBuilder.length() > 0) {
+                                cookieBuilder.append("; ");
+                            }
+                            cookieBuilder.append(cookie.split(";")[0]); // 只取 name=value 部分
+                        }
+                        Preferences.setAuthCookie(cookieBuilder.toString());
+                        Log.d(TAG, "Saved cookies: " + cookieBuilder.toString());
                     }
                     callback.onSuccess(response.body());
                 } else {

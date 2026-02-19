@@ -27,7 +27,28 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         initViews();
+        
+        // 检查是否已登录
+        if (checkAlreadyLoggedIn()) {
+            return;
+        }
+        
         loadSavedCredentials();
+    }
+    
+    private boolean checkAlreadyLoggedIn() {
+        String savedUrl = Preferences.getServerUrl();
+        String savedCookie = Preferences.getAuthCookie();
+        
+        if (!savedUrl.isEmpty() && !savedCookie.isEmpty()) {
+            // 已登录，直接跳转到主页面
+            LunaTVApp.getInstance().setApiClient(savedUrl);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        return false;
     }
 
     private void initViews() {
