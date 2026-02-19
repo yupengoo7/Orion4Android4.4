@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # 构建服务
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lunatv-android-builder
+    container_name: lunatv-builder
+    volumes:
+      # 挂载项目目录
+      - .:/app
+      # 挂载输出目录，方便获取 APK
+      - ./output:/app/app/build/outputs
+      # 挂载 Gradle 缓存，加速后续构建
+      - gradle-cache:/root/.gradle
+    environment:
+      # 设置 Gradle 内存参数
+      - GRADLE_OPTS=-Xmx2048m -XX:MaxMetaspaceSize=512m
+      # 禁用 Gradle Daemon
+      - GRADLE_DAEMON=false
+    command: ./gradlew assembleDebug --no-daemon --stacktrace
+
+  # 快速构建（使用本地 Gradle）
+  build-fast:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lunatv-android-builder
+    container_name: lunatv-builder-fast
+    volumes:
+      - .:/app
+      - ./output:/app/app/build/outputs
+      - gradle-cache:/root/.gradle
+    environment:
+      - GRADLE_OPTS=-Xmx2048m
+    command: ./gradlew assembleDebug --no-daemon --offline
+
+  # Release 构建
+  build-release:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lunatv-android-builder
+    container_name: lunatv-builder-release
+    volumes:
+      - .:/app
+      - ./output:/app/app/build/outputs
+      - gradle-cache:/root/.gradle
+    environment:
+      - GRADLE_OPTS=-Xmx2048m
+    command: ./gradlew assembleRelease --no-daemon
+
+volumes:
+  gradle-cache:

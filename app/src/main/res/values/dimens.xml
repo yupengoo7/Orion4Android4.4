@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 卡片尺寸 - 方形 300x300px -->
+    <dimen name="card_width">300dp</dimen>
+    <dimen name="card_height">300dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    
+    <!-- 登录页面 -->
+    <dimen name="login_container_width">600dp</dimen>
+    <dimen name="login_container_padding">48dp</dimen>
+    <dimen name="login_input_height">56dp</dimen>
+    <dimen name="login_button_height">56dp</dimen>
+    <dimen name="login_spacing">24dp</dimen>
+    <dimen name="login_title_size">36sp</dimen>
+    <dimen name="login_subtitle_size">18sp</dimen>
+    
+    <!-- 主页面 -->
+    <dimen name="browse_padding_top">48dp</dimen>
+    <dimen name="browse_padding_bottom">48dp</dimen>
+    <dimen name="browse_padding_start">48dp</dimen>
+    <dimen name="browse_padding_end">48dp</dimen>
+    <dimen name="header_height">48dp</dimen>
+    <dimen name="header_margin_bottom">16dp</dimen>
+    <dimen name="row_height">350dp</dimen>
+    <dimen name="row_margin_bottom">32dp</dimen>
+    
+    <!-- 详情页 -->
+    <dimen name="detail_padding">48dp</dimen>
+    <dimen name="detail_poster_width">400dp</dimen>
+    <dimen name="detail_poster_height">600dp</dimen>
+    <dimen name="detail_poster_margin_end">48dp</dimen>
+    <dimen name="detail_title_size">36sp</dimen>
+    <dimen name="detail_info_size">18sp</dimen>
+    <dimen name="detail_desc_size">16sp</dimen>
+    <dimen name="detail_spacing">16dp</dimen>
+    <dimen name="episode_button_width">80dp</dimen>
+    <dimen name="episode_button_height">48dp</dimen>
+    <dimen name="episode_button_margin">8dp</dimen>
+    
+    <!-- 播放器 -->
+    <dimen name="player_controls_height">80dp</dimen>
+    <dimen name="player_controls_padding">24dp</dimen>
+    <dimen name="player_progress_height">4dp</dimen>
+    <dimen name="player_time_text_size">14sp</dimen>
+    <dimen name="player_button_size">48dp</dimen>
+    
+    <!-- 搜索页 -->
+    <dimen name="search_input_height">64dp</dimen>
+    <dimen name="search_input_padding">24dp</dimen>
+    <dimen name="search_history_item_height">48dp</dimen>
+    
+    <!-- 通用 -->
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+    
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_xlarge">18sp</dimen>
+    <dimen name="text_xxlarge">24sp</dimen>
+</resources>

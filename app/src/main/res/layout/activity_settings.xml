@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="@dimen/browse_padding_start">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/spacing_large">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/back"
+            android:layout_marginEnd="@dimen/spacing_medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- 设置项容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/background_card"
+        android:padding="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large">
+
+        <!-- 片头跳过 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_skip_intro"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cb_skip_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- 片头时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_skip_time"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:layout_marginEnd="@dimen/spacing_medium" />
+
+            <SeekBar
+                android:id="@+id/seek_intro_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_intro_time"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="90 秒"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="@dimen/spacing_medium" />
+
+        <!-- 片尾跳过 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings_skip_outro"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cb_skip_outro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- 片尾时间 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_skip_time"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:layout_marginEnd="@dimen/spacing_medium" />
+
+            <SeekBar
+                android:id="@+id/seek_outro_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_outro_time"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="120 秒"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 退出登录按钮 -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_height"
+        android:text="@string/settings_logout"
+        android:textColor="@color/error"
+        android:background="@drawable/button_background"
+        android:textSize="18sp" />
+
+</LinearLayout>

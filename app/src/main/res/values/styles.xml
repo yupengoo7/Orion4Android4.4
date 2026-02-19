@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础主题 -->
+    <style name="Theme.LunaTV" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="browseTitleViewLayout">@layout/title_view</item>
+    </style>
+
+    <!-- 登录页面主题 -->
+    <style name="Theme.LunaTV.Login" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 浏览页面主题 -->
+    <style name="Theme.LunaTV.Browse" parent="Theme.Leanback.Browse">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="browseTitleViewLayout">@layout/title_view</item>
+    </style>
+
+    <!-- 详情页面主题 -->
+    <style name="Theme.LunaTV.Details" parent="Theme.Leanback.Details">
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!-- 播放器页面主题 -->
+    <style name="Theme.LunaTV.Player" parent="Theme.Leanback">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 输入框样式 -->
+    <style name="EditText.Login" parent="Widget.Leanback.EditText">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 按钮样式 -->
+    <style name="Button.LunaTV" parent="Widget.Leanback.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <!-- 卡片样式 -->
+    <style name="CardView.LunaTV" parent="CardView">
+        <item name="cardBackgroundColor">@color/background_card</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <!-- 文本样式 -->
+    <style name="Text.LunaTV.Title" parent="TextAppearance.Leanback.Title">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text.LunaTV.Subtitle" parent="TextAppearance.Leanback.Subtitle">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.LunaTV.Body" parent="TextAppearance.Leanback.Body">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background_dark"
+    android:padding="@dimen/login_container_padding">
+
+    <LinearLayout
+        android:layout_width="@dimen/login_container_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_marginBottom="@dimen/login_spacing" />
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textSize="@dimen/login_title_size"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 副标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_subtitle"
+            android:textSize="@dimen/login_subtitle_size"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="@dimen/login_spacing" />
+
+        <!-- 服务器地址 -->
+        <EditText
+            android:id="@+id/et_server_url"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:hint="@string/hint_server_url"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="@dimen/login_spacing" />
+
+        <!-- 用户名 -->
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:hint="@string/hint_username"
+            android:inputType="text"
+            android:maxLines="1"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="@dimen/login_spacing" />
+
+        <!-- 密码 -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_input_height"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="@dimen/login_spacing" />
+
+        <!-- 登录按钮 -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_button_height"
+            android:text="@string/btn_login"
+            android:background="@drawable/button_background"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:layout_marginTop="@dimen/login_spacing" />
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/login_spacing" />
+
+    </LinearLayout>
+
+</LinearLayout>

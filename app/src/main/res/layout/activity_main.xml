@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v17.leanback.widget.BrowseFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/browse_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v17.leanback.widget.VerticalGridView
+        android:id="@+id/vertical_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/browse_padding_start"
+        android:paddingEnd="@dimen/browse_padding_end"
+        android:paddingTop="@dimen/browse_padding_top"
+        android:paddingBottom="@dimen/browse_padding_bottom" />
+
+</android.support.v17.leanback.widget.BrowseFrameLayout>

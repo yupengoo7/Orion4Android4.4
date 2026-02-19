@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LunaTV</string>
+    <string name="app_description">LunaTV Android 4.4 电视客户端</string>
+    
+    <!-- 登录页面 -->
+    <string name="login_title">LunaTV 电视客户端</string>
+    <string name="login_subtitle">连接你的 LunaTV 服务器</string>
+    <string name="hint_server_url">服务器地址 (例如: http://192.168.1.100:3000)</string>
+    <string name="hint_username">用户名</string>
+    <string name="hint_password">密码</string>
+    <string name="btn_login">登 录</string>
+    <string name="login_loading">正在连接服务器...</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="error_empty_url">请输入服务器地址</string>
+    <string name="error_empty_password">请输入密码</string>
+    <string name="error_invalid_url">服务器地址格式不正确</string>
+    <string name="error_connection">无法连接到服务器</string>
+    <string name="error_auth">用户名或密码错误</string>
+    
+    <!-- 主页面 -->
+    <string name="browse_title">LunaTV</string>
+    <string name="header_recommended">热门推荐</string>
+    <string name="header_recent">最近观看</string>
+    <string name="header_favorites">我的收藏</string>
+    <string name="header_movies">电影</string>
+    <string name="header_tv">电视剧</string>
+    <string name="header_search">搜索</string>
+    <string name="header_settings">设置</string>
+    
+    <!-- 详情页 -->
+    <string name="action_play">播放</string>
+    <string name="action_favorite">收藏</string>
+    <string name="action_unfavorite">取消收藏</string>
+    <string name="label_episodes">选集:</string>
+    <string name="label_director">导演:</string>
+    <string name="label_actor">主演:</string>
+    <string name="label_year">年份:</string>
+    <string name="label_type">类型:</string>
+    <string name="label_desc">简介:</string>
+    <string name="label_episode">第%d集</string>
+    
+    <!-- 播放器 -->
+    <string name="player_loading">正在加载视频...</string>
+    <string name="player_error">播放出错</string>
+    <string name="player_buffering">缓冲中...</string>
+    <string name="player_controls_play">播放</string>
+    <string name="player_controls_pause">暂停</string>
+    <string name="player_controls_skip_intro">跳过片头</string>
+    <string name="player_controls_skip_outro">跳过片尾</string>
+    <string name="player_next_episode">下一集</string>
+    <string name="player_previous_episode">上一集</string>
+    
+    <!-- 搜索 -->
+    <string name="search_title">搜索</string>
+    <string name="search_hint">输入影片名称</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search_clear_history">清除历史</string>
+    <string name="search_no_results">未找到相关影片</string>
+    <string name="search_loading">搜索中...</string>
+    
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_skip_intro">跳过片头</string>
+    <string name="settings_skip_outro">跳过片尾</string>
+    <string name="settings_skip_time">跳过时间 (秒)</string>
+    <string name="settings_logout">退出登录</string>
+    <string name="settings_confirm_logout">确定要退出登录吗?</string>
+    <string name="settings_yes">是</string>
+    <string name="settings_no">否</string>
+    
+    <!-- 通用 -->
+    <string name="loading">加载中...</string>
+    <string name="retry">重试</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="back">返回</string>
+    <string name="error_network">网络错误</string>
+    <string name="error_unknown">未知错误</string>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- 视频播放器 -->
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!-- 加载中 -->
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!-- 错误提示 -->
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/player_error"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <!-- 播放控制栏 -->
+    <LinearLayout
+        android:id="@+id/controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_overlay"
+        android:orientation="vertical"
+        android:padding="@dimen/player_controls_padding"
+        android:visibility="gone">
+
+        <!-- 进度条 -->
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:thumb="@drawable/progress_thumb" />
+
+        <!-- 时间和控制按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 当前时间 -->
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/player_time_text_size"
+                android:layout_marginEnd="@dimen/spacing_medium" />
+
+            <!-- 播放/暂停按钮 -->
+            <ImageButton
+                android:id="@+id/btn_play_pause"
+                android:layout_width="@dimen/player_button_size"
+                android:layout_height="@dimen/player_button_size"
+                android:src="@drawable/ic_play"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/player_controls_play" />
+
+            <!-- 片头跳过按钮 -->
+            <Button
+                android:id="@+id/btn_skip_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_controls_skip_intro"
+                android:textColor="@color/accent"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/spacing_medium" />
+
+            <!-- 片尾跳过按钮 -->
+            <Button
+                android:id="@+id/btn_skip_outro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_controls_skip_outro"
+                android:textColor="@color/accent"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/spacing_medium" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- 总时长 -->
+            <TextView
+                android:id="@+id/tv_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/player_time_text_size" />
+
+        </LinearLayout>
+
+        <!-- 标题和集数信息 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+</RelativeLayout>

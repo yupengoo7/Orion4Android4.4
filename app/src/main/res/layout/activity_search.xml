@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="@dimen/browse_padding_start">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/spacing_large">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/back"
+            android:layout_marginEnd="@dimen/spacing_medium" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_input_height"
+            android:layout_weight="1"
+            android:hint="@string/search_hint"
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="@dimen/search_input_padding"
+            android:paddingEnd="@dimen/search_input_padding"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <!-- 搜索历史 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_history"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:layout_marginBottom="@dimen/spacing_medium" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large" />
+
+    <Button
+        android:id="@+id/btn_clear_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_clear_history"
+        android:textColor="@color/text_secondary"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="@dimen/spacing_large" />
+
+    <!-- 搜索结果 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_results"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search_results"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <!-- 空提示 -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_no_results"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- 加载中 -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>
