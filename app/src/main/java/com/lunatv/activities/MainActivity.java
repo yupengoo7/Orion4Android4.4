@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.FocusHighlight;
 import android.support.v17.leanback.widget.HeaderItem;
+import android.support.v17.leanback.widget.ItemBridgeAdapter;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
 import android.support.v17.leanback.widget.OnItemViewClickedListener;
@@ -58,7 +59,8 @@ public class MainActivity extends Activity {
         rowsAdapter = new ArrayObjectAdapter(new ListRowPresenter(FocusHighlight.ZOOM_FACTOR_MEDIUM, false));
         cardPresenter = new CardPresenter();
         
-        verticalGrid.setAdapter(rowsAdapter);
+        ItemBridgeAdapter bridgeAdapter = new ItemBridgeAdapter(rowsAdapter);
+        verticalGrid.setAdapter(bridgeAdapter);
     }
 
     private void loadData() {

@@ -1,6 +1,7 @@
 package com.lunatv.adapters;
 
 import android.support.v17.leanback.widget.Presenter;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
