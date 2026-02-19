@@ -43,6 +43,7 @@ dependencies {
     // OkHttp 3.12.13
     implementation 'com.squareup.okhttp3:okhttp:3.12.13'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.13'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.13'
     
     // Retrofit 2.6.4
     implementation 'com.squareup.retrofit2:retrofit:2.6.4'
@@ -55,5 +56,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     
     // Google Play Services - 用于在 Android 4.4 上启用 TLS 1.2
-    implementation 'com.google.android.gms:play-services-base:17.6.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
 }
