@@ -1,8 +1,10 @@
 package com.lunatv.adapters;
 
 import android.support.v17.leanback.widget.Presenter;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,16 +39,16 @@ public class CardPresenter extends Presenter {
         cardView.removeAllViews();
         
         // 创建卡片内容
-        android.widget.FrameLayout frameLayout = new android.widget.FrameLayout(cardView.getContext());
-        frameLayout.setLayoutParams(new ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT));
+        FrameLayout frameLayout = new FrameLayout(cardView.getContext());
+        frameLayout.setLayoutParams(new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.MATCH_PARENT));
         
         // 海报图片
         ImageView imageView = new ImageView(cardView.getContext());
-        imageView.setLayoutParams(new ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT));
+        imageView.setLayoutParams(new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.MATCH_PARENT));
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         
         // 加载图片
@@ -65,21 +67,19 @@ public class CardPresenter extends Presenter {
         
         // 渐变遮罩
         View overlay = new View(cardView.getContext());
-        overlay.setLayoutParams(new ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            80));
-        android.widget.FrameLayout.LayoutParams params = (android.widget.FrameLayout.LayoutParams) overlay.getLayoutParams();
-        params.gravity = android.view.Gravity.BOTTOM;
-        overlay.setLayoutParams(params);
+        FrameLayout.LayoutParams overlayParams = new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            80);
+        overlayParams.gravity = Gravity.BOTTOM;
+        overlay.setLayoutParams(overlayParams);
         overlay.setBackgroundResource(R.drawable.gradient_overlay);
         
         // 标题
         TextView titleView = new TextView(cardView.getContext());
-        titleView.setLayoutParams(new ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT));
-        android.widget.FrameLayout.LayoutParams titleParams = (android.widget.FrameLayout.LayoutParams) titleView.getLayoutParams();
-        titleParams.gravity = android.view.Gravity.BOTTOM;
+        FrameLayout.LayoutParams titleParams = new FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT);
+        titleParams.gravity = Gravity.BOTTOM;
         titleParams.setMargins(12, 0, 12, 12);
         titleView.setLayoutParams(titleParams);
         
