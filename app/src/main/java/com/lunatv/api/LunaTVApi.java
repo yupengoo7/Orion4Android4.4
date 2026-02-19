@@ -9,6 +9,7 @@ import com.lunatv.models.Video;
 import com.lunatv.utils.Preferences;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -327,7 +328,9 @@ public class LunaTVApi {
     public static class SearchResponse {
         public List<Video> results;
         
-        public List<Video> getResults() { return results; }
+        public List<Video> getResults() { 
+            return results != null ? results : new ArrayList<Video>(); 
+        }
     }
     
     public static class DetailResponse {

@@ -28,6 +28,8 @@ public class CardPresenter extends Presenter {
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, Object item) {
+        if (item == null) return;
+        
         Video video = (Video) item;
         android.support.v7.widget.CardView cardView = (android.support.v7.widget.CardView) viewHolder.view;
         
@@ -48,9 +50,10 @@ public class CardPresenter extends Presenter {
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         
         // 加载图片
-        if (video.getPoster() != null && !video.getPoster().isEmpty()) {
+        String posterUrl = video.getPoster();
+        if (posterUrl != null && !posterUrl.isEmpty()) {
             Picasso.get()
-                .load(video.getPoster())
+                .load(posterUrl)
                 .placeholder(R.drawable.ic_launcher)
                 .error(R.drawable.ic_launcher)
                 .resize(CARD_WIDTH, CARD_HEIGHT)
@@ -79,7 +82,9 @@ public class CardPresenter extends Presenter {
         titleParams.gravity = android.view.Gravity.BOTTOM;
         titleParams.setMargins(12, 0, 12, 12);
         titleView.setLayoutParams(titleParams);
-        titleView.setText(video.getTitle());
+        
+        String title = video.getTitle();
+        titleView.setText(title != null ? title : "");
         titleView.setTextColor(cardView.getContext().getResources().getColor(R.color.text_primary));
         titleView.setTextSize(14);
         titleView.setMaxLines(2);
