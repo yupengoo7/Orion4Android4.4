@@ -36,7 +36,7 @@
     </style>
 
     <!-- 输入框样式 -->
-    <style name="EditText.Login" parent="Widget.Leanback.EditText">
+    <style name="EditText.Login" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/edit_text_background</item>
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textColorHint">@color/text_hint</item>
@@ -48,7 +48,7 @@
     </style>
 
     <!-- 按钮样式 -->
-    <style name="Button.LunaTV" parent="Widget.Leanback.Button">
+    <style name="Button.LunaTV" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textSize">18sp</item>
@@ -71,12 +71,12 @@
         <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="Text.LunaTV.Subtitle" parent="TextAppearance.Leanback.Subtitle">
+    <style name="Text.LunaTV.Subtitle">
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="Text.LunaTV.Body" parent="TextAppearance.Leanback.Body">
+    <style name="Text.LunaTV.Body">
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textSize">14sp</item>
     </style>
